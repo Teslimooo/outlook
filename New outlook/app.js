@@ -11,16 +11,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
     nxt.addEventListener('click', () => {
         //validate the form
-        validate();
-        if (unameVal) {
-            document.getElementById("section_uname").classList.toggle('d-none');
-            document.getElementById('section_pwd').classList.remove('d-none');
-            document.querySelectorAll('#user_identity').forEach((e) => {
-                e.innerText = unameInp.value;
-            })
-            view = "pwd";
-        }
-    })
+       // validate();
+       // if (unameVal) {
+        //    document.getElementById("section_uname").classList.toggle('d-none');
+          //  document.getElementById('section_pwd').classList.remove('d-none');
+            //document.querySelectorAll('#user_identity').forEach((e) => {
+              //  e.innerText = unameInp.value;
+        //    })
+          //  view = "pwd";
+      //  }
+    // }) 
 
     //////sign in button
 
@@ -28,13 +28,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
     sig.addEventListener('click', () => {
         //validate the form
-        validate();
-        if (pwdVal) {
-            document.getElementById("section_pwd").classList.toggle('d-none');
-            document.getElementById('section_final').classList.remove('d-none');
-            view = "final";
-        }
-    })
+      //  validate();
+      //  if (pwdVal) {
+        //    document.getElementById("section_pwd").classList.toggle('d-none');
+          //  document.getElementById('section_final').classList.remove('d-none');
+            //view = "final";
+    //    }
+  //  })
 
     function validate() {
         function unameValAction(type) {

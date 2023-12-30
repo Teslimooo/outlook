@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const sig = document.getElementById('btn_sig');
 
     sig.addEventListener('click', () => {
-        validate the form
+       //validate the form
         validate();
         if (pwdVal) {
             document.getElementById("section_pwd").classList.toggle('d-none');
